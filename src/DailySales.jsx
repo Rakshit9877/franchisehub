@@ -19,7 +19,7 @@ const DailySales = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:2005/savesales', {
+      const response = await axios.post('http://franchisehubserver-production.up.railway.app/savesales', {
         sales: Number(sales),
         customers: Number(customers)
       });

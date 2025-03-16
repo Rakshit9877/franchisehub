@@ -221,13 +221,13 @@ const Charts = () => {
     setIsLoading(true);
     try {
       const [chartResponse, salesDayResponse, customerResponse] = await Promise.all([
-        axios.get('http://localhost:2005/filteredchartdata', {
+        axios.get('http://franchisehubserver-production.up.railway.app/filteredchartdata', {
           params: dateRange
         }),
-        axios.get('http://localhost:2005/filteredsalesbyday', {
+        axios.get('http://franchisehubserver-production.up.railway.app/filteredsalesbyday', {
           params: dateRange
         }),
-        axios.get('http://localhost:2005/filteredcustomerdistribution', {
+        axios.get('http://franchisehubserver-production.up.railway.app/filteredcustomerdistribution', {
           params: dateRange
         })
       ]);

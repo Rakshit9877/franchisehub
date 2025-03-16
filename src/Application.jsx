@@ -49,7 +49,7 @@ const FormRegistration = () => {
         formDataToSend.append("ppic", file);
       }
 
-      const response = await axios.post("http://localhost:2005/saveapplicant", formDataToSend, {
+      const response = await axios.post("http://franchisehubserver-production.up.railway.app/saveapplicant", formDataToSend, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

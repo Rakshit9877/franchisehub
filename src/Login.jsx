@@ -13,7 +13,7 @@ export default function LoginForm() {
     e.preventDefault()
 
     try {
-      const response = await axios.get("http://localhost:2005/validatelogin", {
+      const response = await axios.get("http://franchisehubserver-production.up.railway.app/validatelogin", {
         params: { username, password }
       });
 

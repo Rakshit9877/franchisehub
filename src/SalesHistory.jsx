@@ -22,8 +22,8 @@ const SalesHistory = () => {
     try {
       // Fetch sales history
       const [historyResponse, totalsResponse] = await Promise.all([
-        axios.get(`http://localhost:2005/saleshistory?from=${startDate}&to=${endDate}`),
-        axios.get(`http://localhost:2005/totalsales?from=${startDate}&to=${endDate}`)
+        axios.get(`http://franchisehubserver-production.up.railway.app/saleshistory?from=${startDate}&to=${endDate}`),
+        axios.get(`http://franchisehubserver-production.up.railway.app/totalsales?from=${startDate}&to=${endDate}`)
       ]);
 
       if (historyResponse.data.status) {

@@ -12,7 +12,7 @@ const Settings = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:2005/updatepassword', {
+      const response = await axios.post('http://franchisehubserver-production.up.railway.app/updatepassword', {
         email: 'abc@gmail.com',
         currentPassword,
         newPassword
