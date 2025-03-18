@@ -19,7 +19,7 @@ const DailySales = () => {
     }
 
     try {
-      const response = await axios.post('http://franchisehubserver-production.up.railway.app/savesales', {
+      const response = await axios.post('https://franchisehubserver-production.up.railway.app/savesales', {
         sales: Number(sales),
         customers: Number(customers)
       });

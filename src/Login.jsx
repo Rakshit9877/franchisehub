@@ -13,7 +13,7 @@ export default function LoginForm() {
     e.preventDefault()
 
     try {
-      const response = await axios.get("http://franchisehubserver-production.up.railway.app/validatelogin", {
+      const response = await axios.get("https://franchisehubserver-production.up.railway.app/validatelogin", {
         params: { username, password }
       });
 

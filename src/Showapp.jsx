@@ -19,7 +19,7 @@ const ShowApp = () => {
 
   const fetchApplications = async () => {
     try {
-      const response = await axios.get("http://franchisehubserver-production.up.railway.app/allapplications");
+      const response = await axios.get("https://franchisehubserver-production.up.railway.app/allapplications");
       setApplications(response.data);
       setLoading(false);
       setActiveFilter('all');
@@ -33,7 +33,7 @@ const ShowApp = () => {
   const fetchFilteredApplications = async (status) => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://franchisehubserver-production.up.railway.app/showfilter/${status}`);
+      const response = await axios.get(`https://franchisehubserver-production.up.railway.app/showfilter/${status}`);
       setApplications(response.data);
       setLoading(false);
       setActiveFilter(status.toString());
@@ -55,7 +55,7 @@ const ShowApp = () => {
   const saveLoginCredentials = async (credentials) => {
     try {
       const response = await axios.post(
-        "http://franchisehubserver-production.up.railway.app/savelogin",
+        "https://franchisehubserver-production.up.railway.app/savelogin",
         credentials
       );
       if (!response.data.status) {
@@ -95,7 +95,7 @@ const ShowApp = () => {
   const updateStatus = async (uid, status) => {
     try {
       const response = await axios.post(
-        "http://franchisehubserver-production.up.railway.app/updatestatus",
+        "https://franchisehubserver-production.up.railway.app/updatestatus",
         { uid, status }
       );
       
@@ -114,7 +114,7 @@ const ShowApp = () => {
                 name: application.name || 'User',
                 username: credentials.username,
                 password: credentials.password,
-                login_url: 'http://franchisehubserver-production.up.railway.app/login',
+                login_url: 'https://franchisehubserver-production.up.railway.app/login',
                 support_email: 'support@franchise.com',
                 mobile: application.mob || '',
                 address: application.addr || '',
